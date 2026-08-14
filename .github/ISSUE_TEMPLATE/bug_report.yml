@@ -1,0 +1,47 @@
+name: Bug report
+description: Report incorrect behavior in a skill, script, or validation rule.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Affected skill
+      options:
+        - wechat-official-account-content
+        - wechat-case-research
+        - wechat-adversarial-review
+        - wechat-reader-simulation
+        - wechat-final-editor
+        - wechat-editorial-longform
+        - wechat-photoshop-delivery
+        - wechat-visual-qa
+        - multiple skills
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and why it is incorrect.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Provide a minimal reproducible sequence without client or private data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation output
+      description: Include relevant command output with credentials removed.
+

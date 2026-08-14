@@ -1,0 +1,52 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# Client and production assets
+*.psd
+*.psb
+*.ai
+*.indd
+*.fig
+*.sketch
+deliverables/
+exports/
+client-assets/
+private/
+
+# Generated media and archives
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.tif
+*.tiff
+*.mp4
+*.mov
+*.zip
+*.7z
+
+# Runtime and test artifacts
+node_modules/
+__pycache__/
+*.pyc
+coverage/
+.pytest_cache/
+tmp/
+temp/
+.tmp/
+*.log
+*-qa.txt
+*-complete.txt
+
+# Editor and OS metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
