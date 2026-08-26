@@ -98,6 +98,23 @@ Get-ChildItem .\skills -Recurse -Filter '*.test.js' | ForEach-Object { node $_.F
 Get-ChildItem .\skills -Recurse -Filter '*.test.ps1' | ForEach-Object { & $_.FullName }
 ```
 
+## 文档
+
+### 使用指南
+
+- [公众号创作技能包调用 Prompt 手册](docs/guides/prompt-handbook.zh-CN.md)
+- [公众号多 Agent 审稿流程 Prompt 手册](docs/guides/multi-agent-review-prompts.zh-CN.md)
+- [七条主流程验证报告](docs/guides/seven-workflows-validation.zh-CN.md)
+
+### 工程与审计记录
+
+- [前向路由测试](docs/engineering/forward-routing-tests.zh-CN.md)
+- [开源方案审计](docs/engineering/open-source-audit.zh-CN.md)
+- [Skills 产品化实施计划](docs/engineering/productization-plan.zh-CN.md)
+- [GitHub 公开发布计划](docs/engineering/github-publication-plan.zh-CN.md)
+
+这些文档已移除本机绝对路径、客户项目标识和交付资产；历史项目专项审计不进入公开仓库。
+
 ## 贡献
 
 欢迎通过 Issue 提交问题或建议，也欢迎通过 Pull Request 改进触发描述、工作流、规则、脚本和测试。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
@@ -117,4 +134,3 @@ Get-ChildItem .\skills -Recurse -Filter '*.test.ps1' | ForEach-Object { & $_.Ful
 ## English summary
 
 Reusable Agent Skills for WeChat Official Account research, fact-checking, editorial writing, adversarial review, reader simulation, longform editorial design, Photoshop delivery, and visual QA. Client assets and production project files are intentionally excluded.
-
