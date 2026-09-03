@@ -32,6 +32,13 @@ description: 微信公众号内容创作与竞品分析入口。用于标题生�
 
 同一请求跨越多个阶段时，按 `references/content-operation-workflow.md` 执行门禁；不得在视觉未确认时提前批量生成源文件。
 
+## 跨平台制作与核验入口
+
+- 本工作流同时适用于公众号及其小红书图文改编；小红书分页和文案制作必须读取 `references/cross-platform-distribution.md`，视觉制作接 `wechat-editorial-longform` 的小红书分支。
+- 每期主动完成事实核验，不等待用户追问；存在外部事实的标题、封面字、摘要、正文、页面大字、英文标签和图片内可读文字均纳入核验。由 `wechat-case-research` 核验事实，`wechat-final-editor` 复核压缩语义，`wechat-adversarial-review` 检查误导风险。
+- 原稿通过不代表改写稿或成图通过。完整制作执行“事实核验 → 压缩稿 → 语义复核 → 排版 → 实际成图复核 → 用户确认 → 导出一致性检查”；明确小改动只复查受影响内容及跨页关联，不重启无关环节。
+- 审核与更新权限按 `references/content-operation-workflow.md` 的“确认记录与本地更新边界”执行；复盘建议不能自动写成永久 Skill 规则。
+
 ## 输入类型
 
 可接受以下任意输入：
@@ -188,14 +195,14 @@ description: 微信公众号内容创作与竞品分析入口。用于标题生�
 执行要点：
 
 1. 如果用户只给关键词，先用一句话确认核心角度，然后直接输出标题、摘要、封面字和正文。
-2. 默认生成“可直接发布版”，标准版控制在 1200-1800 字；除非用户明确要求深度长文。
+2. 默认输出可供确认的完整稿，公众号标准版参考 1200-1800 字；深度需求与内容完整性优先。只有事实和所需发布条件均通过才称“可直接发布版”，未核实稿不得沿用此标签；此字数参考不限制小红书页数。
 3. 基于爆款数据时，只提炼标题、结构、钩子和转发理由，不照搬观点和表达。
 4. 所有文章读取 `references/writing-workflow.md`、`references/personal-voice.md`、`references/content-density.md`。
 5. 未来弧线文章必须读取 `references/brand-future-arc.md` 和 `references/giant-installation-positioning.md`。
 6. 涉及行业案例、公共艺术、商业空间、文旅、商业地产时，按需读取 `references/professional-credibility.md`、`references/critical-insight.md`、`references/concept-boundaries.md`。
 7. 如果用户给的是草稿，不要重新开一套流程，直接做：发布判断、主要问题、可直接替换版。
 8. 结尾默认给互动问题、私域承接话术、小红书/视频号标题方向。
-9. 外部案例多、事实字段多或图片版权不清时，先调用 `wechat-case-research`；未核实内容不能进入发布终稿。
+9. 涉及外部可验证事实或图片版权不清时，先调用 `wechat-case-research`；未核实内容不能进入发布终稿。
 10. 正文确认后，如用户要公众号长图或 PSD，先将终稿交给 `wechat-editorial-longform`，不要在文案阶段直接批量排版。
 
 未来弧线文章主叙事顺序：
@@ -207,7 +214,7 @@ description: 微信公众号内容创作与竞品分析入口。用于标题生�
 默认输出：
 
 ```markdown
-## 可直接发布版
+## 完整稿（按实际核验状态注明是否可发布）
 
 **标题：**
 **封面字：**
